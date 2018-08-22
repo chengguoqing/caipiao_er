@@ -1,0 +1,73 @@
+.pm80 {
+    padding-bottom: 80px;
+}
+
+.v-modal {
+    z-index: 200000 !important
+}
+
+.mint-msgbox-wrapper {
+    z-index: 200001 !important
+}
+
+.amap-logo,
+.amap-copyright {
+    display: none !important
+}
+
+.close_der {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #E53E3E;
+    font-size: 20px;
+}
+
+.sd_jh_derr img {
+    max-width: 100%;
+}
+
+.mint-msgbox-message {
+    color: #666 !important;
+    line-height: 1.5;
+    text-align: left
+}
+
+.mint-msgbox-content {
+    padding: 10px 15px 15px 15px;
+}
+
+.logo_sdert {
+    width: 22px;
+    height: 40px;
+    background-position: -321px -38px;
+}
+
+.sd_jh_derr {
+    border: 0px;
+    text-indent: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    height: auto !important;
+}
+
+
+.test-textarea {
+    min-height: 26px;
+    line-height: 20px;
+    _height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-user-modify: read-write-plaintext-only;
+
+}
+    .amap-page-container {
+        height: 150px;
+        border: 0px !important
+    }

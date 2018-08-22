@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        body {
+            background: #EFEFF4
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .fz12 {
+            font-size: 12px;
+        }
+
+        .fz16 {
+            font-size: 16px;
+        }
+
+        .fz14 {
+            font-size: 14px;
+        }
+
+        .fz40 {
+            font-size: 40px;
+        }
+
+        .z3 {
+            color: #333
+        }
+
+        .z6 {
+            color: #666
+        }
+
+        .z9 {
+            color: #999;
+        }
+
+        .cen {
+            text-align: center
+        }
+
+        .mt10 {
+            margin-top: 10px;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+        .mt30 {
+            margin-top: 30px;
+        }
+
+        .pt10 {
+            padding-top: 10px
+        }
+
+        .pt15 {
+            padding-top: 15px;
+        }
+
+        .pm10 {
+            padding-bottom: 10px
+        }
+
+        .pm15 {
+            padding-bottom: 15px;
+        }
+
+        .bgff {
+            background: #fff
+        }
+
+        .fl {
+            float: left
+        }
+
+        .fr {
+            float: right
+        }
+
+        .ov {
+            overflow: hidden
+        }
+
+        .pd {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .qc {
+            clear: both
+        }
+
+        .btm {
+            border-top: 1px solid #F5F5F5
+        }
+
+        .f_i {
+            display: inline-block;
+            background: url(http://mall.cangniaowl.com/static/img/xbt.png);
+            background-size: 360px;
+            vertical-align: middle!important;
+        }
+
+        .zhifu_sd {
+            width: 36px;
+            height: 36px;
+            background-position: -150px -189px;
+            transform: scale(0.8);
+        }
+
+        .ml10 {
+            margin-left: 10px;
+        }
+
+        .pl10 {
+            padding-left: 10px;
+        }
+
+        .df_kjjh_dert {
+            padding-top: 6px;
+        }
+
+        .zhifu_sd.ab {
+            width: 40px;
+            height: 40px;
+            background-position: -205px -185px;
+        }
+
+        .pr {
+            position: relative;
+        }
+
+        .gou_xsdf {
+            width: 26px;
+            height: 26px;
+            background-position: -308px -198px;
+            position: absolute;
+            right: 10px;
+            top: 16px;
+            transform: scale(0.8);
+        }
+
+        .gou_xsdf.act {
+            background-position: -268px -199px;
+        }
+
+        .mt60 {
+            margin-top: 60px!important;
+        }
+
+        .bgls {
+            background: #0076EF !important;
+            border: 1px solid #0076EF !important;
+            color: #fff;
+        }
+
+        .w100 {
+            width: 100%;
+        }
+
+        .zhius_sd {
+            width: 100%;
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 4px;
+        }
+
+        .cz_w {
+            display: table !important;
+        }
+
+        .cz_a {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .sd_dd_errt {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.5)
+        }
+
+        .dsfd_jh_der {
+            margin: auto;
+            width: 300px;
+            background: #fff;
+            border-radius: 4px;
+        }
+
+        .df_jh_dert {
+            margin-top: 20px;
+        }
+
+        .df_jh_dert span {
+            display: block;
+            width: 50%;
+            float: left;
+            line-height: 35px;
+        }
+
+        .sd_dertx {
+            background: #F44336;
+            color: #fff;
+        }
+
+        .load_am {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+            width: 60px;
+            height: 60px;
+            z-index: 10000;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .load_quan {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: rotate(360deg);
+            animation: rotation 1s linear infinite;
+            -moz-animation: rotation 1s linear infinite;
+            -webkit-animation: rotation 1s linear infinite;
+            -o-animation: rotation 1s linear infinite;
+        }
+
+        .sd_jh_cdsdf {
+            background: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            display: none
+        }
+
+        .sd_jh_deert {
+            width: 300px;
+            height: 135px;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+            border-radius: 4px;
+        }
+
+        .tite_ser {
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+        }
+
+        .dsf_jh_der {
+            color: red;
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+            border-top: 1px solid #e0e0e0
+        }
+
+        .dsf_jh_der.ab {
+            color: #999
+        }
+
+        @-webkit-keyframes rotation {
+            0% {
+                -webkit-transform: rotate(0);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotation {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .load_logo_sd {
+            width: 20px;
+        }
+
+        .cz {
+            vertical-align: middle!important
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <p></p>
+    <section class="cen mt10">
+        <p class="z3 fz14 pt10"> 订单编号：<span id="dingdan">-</span> </p>
+        <section class="mt15 fz40 z6 pt15"> ￥<span id="yuert">-</span> </section>
+    </section>
+    <section class="bgff pt10 pm10 pd mt20"> <span class="fz14 z9">收款方</span> <span class="fr fz14 fr" id="shop_in"></span>
+        <p class="qc"></p>
+    </section>
+    <section class="mt10 btm bgff">
+        <p class="pd pt10 pm10 fz14 z9">选择支付方式</p>
+        <section class="pd pt10 pm10 fz14 z9 btm pr lkjh_dsd_er"> <i class="f_i zhifu_sd fl"></i>
+            <section class="ov pl10 df_kjjh_dert"> <span class="z3 fz16 ">微信支付</span> </section>
+            <p class="qc"></p> <i class="f_i gou_xsdf act" data-id="1"></i> </section>
+
+        <section class="pd pt10 pm10 fz14 z9 btm pr lkjh_dsd_er ab"> <i class="f_i zhifu_sd fl ab"></i>
+            <section class="ov pl10"> <span class="z3 fz16 ">余额支付</span>
+                <p class="fz12">可用余额：<span id="user_money">0</span>元</p>
+            </section>
+            <p class="qc"></p> <i class="f_i gou_xsdf" data-id="2"></i> </section>
+    </section>
+    <p class="mt60 pd"><a class="zhius_sd bgls cf querenzhi">确认支付</a></p>
+
+
+    <section class="sd_jh_cdsdf">
+        <section class="yj4 bgff sd_jh_deert">
+            <p class="tite_ser">
+                请确认微信支付是否已完成
+            </p>
+            <p class="dsf_jh_der aa">
+                已完成支付
+            </p>
+            <p class="dsf_jh_der ab">
+                支付遇到问题，重新支付
+            </p>
+        </section>
+    </section>
+    <script src="https://mall.cangniaowl.com/static/js/jquery-1.11.3.min.js"></script>
+    <script>
+        var result = ""
+        var parseParam = function(param, key) {
+            var paramStr = "";
+            if (param instanceof String || param instanceof Number || param instanceof Boolean) {
+                paramStr += "&" + key + "=" + encodeURIComponent(param);
+            } else {
+                $.each(param, function(i) {
+                    var k = key == null ? i : key + (param instanceof Array ? "[" + i + "]" : "." + i);
+                    paramStr += '&' + parseParam(this, k);
+                });
+            }
+            return paramStr.substr(1);
+        };
+        var orderpay_sd = ""
+        $(function() {
+            var urlToObject = function(url) {
+                var urlObject = {};
+                if (/\?/.test(url)) {
+                    var urlString = url.substring(url.indexOf("?") + 1);
+                    var urlArray = urlString.split("&");
+                    for (var i = 0, len = urlArray.length; i < len; i++) {
+                        var urlItem = urlArray[i];
+                        var item = urlItem.split("=");
+                        urlObject[item[0]] = item[1];
+                    }
+                    return urlObject;
+                }
+            };
+
+
+
+
+            var testUrl = decodeURI(window.location.href),
+                sd_drrtt = urlToObject(testUrl)
+
+            result = urlToObject(testUrl);
+            if (result.type_d == 55) {
+                console.log(encodeURIComponent(window.location.href + "&type_d=55"));
+                $(".sd_jh_cdsdf").show()
+
+            }
+
+
+            var sd_der = {}
+            sd_der.token = result.token
+            sd_der.order_id = result.order_id
+            ajax_s("user/orderpay", sd_der, function(data) {
+                orderpay_sd = data.data
+                if (data.err_code == "300002") {
+
+                    return
+                }
+                $("#dingdan").text(data.data.order_sn)
+                $("#user_money").text(data.data.user_money)
+                if (data.data.user_money <= 0) {
+                    $(".lkjh_dsd_er.ab").hide()
+                }
+                $("#yuert").html(price_guo(data.data.order_amount))
+
+                if (data.data.order_amount == "0.00") {
+                    $(".lkjh_dsd_er").eq(1).find(".gou_xsdf").addClass("act")
+                    $(".lkjh_dsd_er").eq(0).remove()
+
+                }
+                $("#shop_in").text(data.data.shop_name)
+                result = data.data
+            })
+
+
+
+            $(".dsf_jh_der.aa").on("click", function() {
+                window.location.href = "https://api.cangniaowl.com/shop/" + result.shop_id + ".html?goods_id=" + sd_drrtt.goods_id
+            })
+            $(".dsf_jh_der.ab").on("click", function() {
+                $(".sd_jh_cdsdf").hide()
+            })
+
+
+            $(".lkjh_dsd_er").on("click", function() {
+                $(".gou_xsdf").removeClass("act")
+                $(this).find(".gou_xsdf").addClass("act")
+            })
+
+            //            确认支付按钮触发
+            $(".querenzhi").on("click", function() {
+
+                var type_e = $(".lkjh_dsd_er .gou_xsdf.act").attr("data-id") //1微信支付 2余额支付
+
+                if (type_e == 2) {
+                    // 余额不足
+                    if (parseFloat(result.user_money) < parseFloat(result.order_amount)) {
+                        tishi("余额不足", function() {
+                            //                            window.location.href = "https://api.cangniaowl.com/shop/" + result.shop_id + ".html#/chongzhi"
+                        }, '去充值')
+                        return
+                    } else {
+                        tishi("确认使用余额支付吗?", function() {
+                            var balancepayment = {}
+                            balancepayment.token = sd_der.token
+                            balancepayment.order_id = result.order_id
+                            ajax_s("shopping/balancepayment", balancepayment, function(data) {
+
+                                if (data.return_code == "FAIL") {
+                                    alert(data.return_msg)
+                                    return
+                                }
+                                window.location.href = "https://api.cangniaowl.com/shop/" + result.shop_id + ".html?goods_id=" + sd_drrtt.goods_id
+
+
+
+                            })
+                        })
+                    }
+                } else {
+                    if (result.openid == "") {
+                        $(".sd_jh_cdsdf").show()
+                        var sd_sx_s = JSON.parse(result.wxpay),
+                            package = sd_sx_s.package,
+                            prepay_id = package.split("=")[1]
+                        setTimeout(function() {
+                            window.location.href = "https://wx.tenpay.com/cgi-bin/mmpayweb-bin/checkmweb?prepay_id=" + prepay_id + "&package=" + sd_sx_s.timeStamp + "&redirect_url=" + encodeURIComponent(window.location.href + "&type_d=55")
+                        }, 500);
+
+                    } else {
+                        callpay()
+                    }
+
+                }
+
+            })
+
+        })
+
+
+
+        function price_guo(t) {
+            t = parseFloat(t).toFixed(2)
+            t += ""
+            var price_a = t.split(".")[0],
+                price_b = t.split(".")[1]
+            return price_a + '.<span class="fz16">' + price_b + '</span>'
+        }
+
+
+
+        function tishi(text, call_b, s_jh_df) {
+
+            $("body").append('    <section class="cz_w sd_dd_errt"> <section class="cz_a"> <section class="dsfd_jh_der"> <p class="cen pt10 pm10">温馨提示！</p> <p class="cen z6 fz16 mt15 pt10"> ' + text + ' </p> <section class="btm df_jh_dert"> <span class="quxias_s">取消</span> <span class="sd_dertx">' + (!s_jh_df ? "确认" : s_jh_df) + '</span> <p class="qc"></p> </section> </section> </section> </section>')
+            $(".quxias_s").off("click").on("click", function() {
+                $(this).parents(".sd_dd_errt").remove()
+            })
+            $(".sd_dertx").off("click").on("click", function() { //确认按钮触发
+                call_b()
+                $(this).parents(".sd_dd_errt").remove()
+            })
+
+        }
+
+
+        function ajax_s(url, data_d, call) {
+            $.ajax({
+                type: 'POST',
+                url: "https://api.cangniaowl.com/v1/" + url,
+                data: data_d,
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                dataType: 'json',
+                success: function(data) {
+                    call(data)
+                },
+                error: function(res) {
+                    alert("请求失败")
+                }
+            });
+
+        }
+
+
+        function urlencode(data) {
+            var _result = [];
+            for (var key in data) {
+                var value = data[key];
+                if (value.constructor == Array) {
+                    value.forEach(function(_value) {
+                        _result.push(key + "=" + _value);
+                    });
+                } else {
+                    _result.push(key + '=' + value);
+                }
+            }
+            return _result.join('&');
+        }
+
+
+
+
+
+
+        function callpay() {
+
+            var th = this
+            if (typeof WeixinJSBridge == "undefined") {
+                if (document.addEventListener) {
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                }
+            } else {
+                jsApiCall();
+            }
+        }
+
+        function jsApiCall() {
+                var urlToObject = function(url) {
+                var urlObject = {};
+                if (/\?/.test(url)) {
+                    var urlString = url.substring(url.indexOf("?") + 1);
+                    var urlArray = urlString.split("&");
+                    for (var i = 0, len = urlArray.length; i < len; i++) {
+                        var urlItem = urlArray[i];
+                        var item = urlItem.split("=");
+                        urlObject[item[0]] = item[1];
+                    }
+                    return urlObject;
+                }
+            };
+
+
+               var testUrl = decodeURI(window.location.href),
+                sd_drrtt = urlToObject(testUrl)
+
+
+            var th = this,
+                jsApiParameters = JSON.parse(result.wxpay)
+            var url_de = "https://api.cangniaowl.com/shop/" + result.shop_id + ".html?goods_id=" + sd_drrtt.goods_id
+
+
+            WeixinJSBridge.invoke(
+                'getBrandWCPayRequest', jsApiParameters,
+                function(res) {
+                    if (res.err_msg == "get_brand_wcpay_request:ok") {
+                        load_sd()
+                        setTimeout(function() {
+                            $(".load_am").remove()
+                            window.location.href = url_de
+                        }, 500);
+                    } else {
+                        return false;
+                    }
+                }
+            );
+        }
+
+        function load_sd() {
+            $("body").append('  <section class="load_am"> <img src="http://mall.cangniaowl.com/static/img/load_quan.png" class="load_quan"> <img src="http://mall.cangniaowl.com/static/img/load_logo.png" class="load_logo_sd cz"> </section>')
+        }
+
+    </script>
+
+</body>
+
+</html>
